@@ -20,6 +20,11 @@ public partial class MainPage : ContentPage
             "DisplayPrompt is broken in release mode when using numeric keyboard",
             keyboard: Keyboard.Numeric);
 
+        result = await Application.Current!.MainPage!.DisplayPromptAsync(
+            "Telephone keyboard works",
+            "DisplayPrompt works in release mode when using telephone keyboard",
+            keyboard: Keyboard.Telephone);
+
         string breakpoint = result;
     }
 }
